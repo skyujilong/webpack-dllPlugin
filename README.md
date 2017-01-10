@@ -140,9 +140,10 @@ module.exports = {
 
 ### 打包效果对比
 没有`webpack.DllReferencePlugin`插件，打包时间：*6525ms*，资源包：*main.js 757k*。
-![](/images/front/withoutDll.png)
+![](www.chenchunyong.com/images/front/withoutDll.png)
+
 配置`webpack.DllReferencePlugin`插件，打包时间：*892ms*，资源包：*main.js 4.7k*。
-![](/images/front/dll.png)
+![](www.chenchunyong.com/images/front/dll.png)
 通过dllPlugin，打包时间快了5s，资源包少了700k。
 ### demo 地址
 https://github.com/chenchunyong/webpack-dllPlugin
