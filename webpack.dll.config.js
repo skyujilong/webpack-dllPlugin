@@ -2,10 +2,10 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        bundle: ['react','react-dom'],
+        bundle: ['react', 'react-dom'],
     },
     output: {
-    	path: './build',
+        path: './build',
         filename: '[name].js',
         library: '[name]_library'
     },

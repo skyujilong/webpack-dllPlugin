@@ -10,19 +10,19 @@ module.exports = {
     filename: '[name].js'
   },
   module: {
-    loaders:[
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
-      {
-        test: /\.jsx?$/,
-        loaders: ['babel-loader?presets[]=es2015&presets[]=react'],
-        include: path.join(__dirname, '.')
-      }
-    ]
+    loaders: [{
+      test: /\.(png|jpg)$/,
+      loader: 'url-loader?limit=8192'
+    }, {
+      test: /\.jsx?$/,
+      loaders: ['babel-loader?presets[]=es2015&presets[]=react'],
+      include: path.join(__dirname, '.')
+    }]
   },
   plugins: [
-     new webpack.DllReferencePlugin({
+    new webpack.DllReferencePlugin({
       context: '.',
       manifest: require("./build/bundle.manifest.json"),
-        }),
+    }),
   ]
 };
