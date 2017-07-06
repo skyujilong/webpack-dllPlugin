@@ -1,8 +1,8 @@
 const webpack = require('webpack');
-
+const path = require('path');
 module.exports = {
     entry: {
-        bundle: ['react', 'react-dom'],
+        bundle: ['react', 'react-dom']
     },
     output: {
         path: './build',
@@ -11,8 +11,9 @@ module.exports = {
     },
     plugins: [
         new webpack.DllPlugin({
-            path: './build/bundle.manifest.json',
-            name: '[name]_library',
+            context: __dirname,
+            path:  path.join(__dirname,'build','bundle.manifest.json'),
+            name: '[name]_library'
         })
     ]
 };
